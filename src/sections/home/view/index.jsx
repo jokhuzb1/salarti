@@ -1,4 +1,5 @@
 import Card from "../../../components/Card";
+// import Spinner from "../../../components/helpers/spinnerImg/Spinner";
 import Gallery from "../../gallery/view";
 import Products from "../../products/view";
 import Header from "../Header";

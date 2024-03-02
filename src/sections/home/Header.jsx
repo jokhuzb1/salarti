@@ -2,6 +2,8 @@ import head from "/images/flowers/head.png";
 import dots from "/images/dots.png";
 import play from "/images/helpers/play.png";
 import CustomButton from "../../components/helpers/CustomButton";
+import Spinner from "../../components/helpers/spinnerImg/Spinner";
+import { Suspense } from "react";
 const Header = () => {
   return (
     <div className="bg-[#F4F7F8] w-full lg:h-[80vh] flex flex-col lg:flex-row lg:justify-between">
@@ -20,7 +22,7 @@ const Header = () => {
             <CustomButton title="Discover" />
             <span className="flex justify-center items-center gap-5">
               <div className="bg-primary p-3 w-fit rounded-full ">
-                <img src={play} alt="icon play" />
+                <img src={play} alt="icon play" loading="lazy" />
               </div>
               <p className="underline ">Watch video</p>
             </span>
@@ -28,8 +30,10 @@ const Header = () => {
         </div>
       </div>
       <div className="relative lg:w-1/2 flex items-center ">
-        <img src={head} alt="main flower" className="object-cover" />
-        <img src={dots} alt="dots" className="absolute left-0 right-0" />
+        <Suspense fallback={<Spinner />}>
+          <img src={head} alt="main flower" className="object-cover" />
+          <img src={dots} alt="dots" className="absolute left-0 right-0" />
+        </Suspense>
       </div>
     </div>
   );
