@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="bg-[#F4F7F8] w-full lg:h-[80vh] flex flex-col lg:flex-row lg:justify-between">
       <div className="lg:w-1/2 flex flex-col justify-center items-center">
-        <div className="flex  flex-col gap-10">
+        <div className="flex py-10 flex-col gap-0  lg:gap-5 px-10 text-start ">
           <span className="fade-in-text uppercase font-medium tracking-widest text-primary">
             decorate your home
           </span>
@@ -16,7 +16,7 @@ const Header = () => {
             Feel your home
           </h2>
           <h2 className="animate-fade-up text-6xl">
-            With a modern degin <br /> space
+            With a modern degin <br className="hidden md:block" /> space
           </h2>
           <div className="animate-fade-up flex justift-center items-center gap-5">
             <CustomButton title="Discover" />
